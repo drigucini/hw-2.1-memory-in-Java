@@ -2,6 +2,15 @@ import java.util.Arrays;
 
 public class Main {
 
+    public static void main(String[] args) {
+        task5();
+        task6();
+        task7();
+        task8();
+        task9();
+        task10();
+    }
+
     public static void task5 () {
         System.out.println("Task 5");
         int value = 33;
@@ -71,21 +80,14 @@ public class Main {
         System.out.println("Inside method: " + Arrays.toString(value));
     }
 
-    public static Person changePerson(Person person) {
+    public static void changePerson(Person person) {
         person = new Person("Ilya", "Lagutenko");
-        return person;
+        System.out.println("Inside method: " + person);
     }
-    public static Person changePerson1(Person person) {
+    public static void changePerson1(Person person) {
         person.setName("Ilya");
         person.setSurname("Lagutenko");
-        return person;
+        System.out.println("Inside method: " + person);
     }
-    public static void main(String[] args) {
-        task5();
-        task6();
-        task7();
-        task8();
-        task9();
-        task10();
-    }
+
 }
