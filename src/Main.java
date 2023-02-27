@@ -2,45 +2,6 @@ import java.util.Arrays;
 
 public class Main {
 
-    public static int changeValue(int value) {
-        value = 22;
-        return value;
-    }
-
-    public static Integer changeValue(Integer value) {
-        value = 22;
-        return value;
-    }
-
-    public static Integer[] changeValue(Integer[] value) {
-        value[0] = 1;
-        value[1] = 2;
-        return value;
-    }
-
-    public static Integer[] changeValue1(Integer[] value) {
-        value[0] = 99;
-        return value;
-    }
-
-    public static Person changePerson(Person person) {
-        person = new Person("Ilya", "Lagutenko");
-        return person;
-    }
-    public static Person changePerson1(Person person) {
-        person.setName("Ilya");
-        person.setSurname("Lagutenko");
-        return person;
-    }
-    public static void main(String[] args) {
-        task5();
-        task6();
-        task7();
-        task8();
-        task9();
-        task10();
-    }
-
     public static void task5 () {
         System.out.println("Task 5");
         int value = 33;
@@ -60,7 +21,7 @@ public class Main {
 
     public static void task7 () {
         System.out.println("\nTask 7");
-        Integer[] value = {3, 4};
+        Integer[] value = new Integer[] {3, 4};
         System.out.println("Initial value is " + Arrays.toString(value));
         changeValue(value);
         System.out.println("New value is " + Arrays.toString(value));
@@ -88,5 +49,43 @@ public class Main {
         System.out.println("Initial person is " + person);
         changePerson1(person);
         System.out.println("New person is " + person);
+    }
+
+    public static void changeValue(int value) {
+        value = 22;
+        System.out.println("Inside method: " + value);
+    }
+
+    public static void changeValue(Integer value) {
+        value = 22;
+        System.out.println("Inside method: " + value);
+    }
+
+    public static void changeValue(Integer[] value) {
+        value = new Integer[]{1, 2};
+        System.out.println("Inside method: " + Arrays.toString(value));
+    }
+
+    public static void changeValue1(Integer[] value) {
+        value[0] = 99;
+        System.out.println("Inside method: " + Arrays.toString(value));
+    }
+
+    public static Person changePerson(Person person) {
+        person = new Person("Ilya", "Lagutenko");
+        return person;
+    }
+    public static Person changePerson1(Person person) {
+        person.setName("Ilya");
+        person.setSurname("Lagutenko");
+        return person;
+    }
+    public static void main(String[] args) {
+        task5();
+        task6();
+        task7();
+        task8();
+        task9();
+        task10();
     }
 }
